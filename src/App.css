@@ -1,38 +1,410 @@
-.App {
-  text-align: center;
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding-top: 56px; /* Assuming you have a fixed navbar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header styles */
+header {
+  background: #333;
+  color: #fff;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  padding: 1rem 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background: #f39c12;
+  color: #333;
+}
+
+.header-text {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.header-text h1 span {
+  color: #f39c12;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items to left and right */
+}
+
+.header-image {
+  max-width: calc(50% - 10px); /* Adjust the maximum width of the image area */
+}
+
+.header-image img {
+  width: 100%;
+  border-radius: 10px; /* Add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Common styles for sections */
+.bg-dark {
+  background-color: #333; /* Dark background color */
+}
+
+.text-white {
+  color: #fff; /* White text color */
+}
+
+.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* About section */
+.sub-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Tab titles */
+.tab-titles {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+/* Tab links */
+.tab-links {
+  cursor: pointer;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.tab-links:hover {
+  background-color: #555; /* Darker background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.tab-links.active-link {
+  background-color: #555; /* Darker background for active tab */
+  color: #fff; /* White text for active tab */
+}
+
+/* Tab contents */
+.tab-contents {
+  display: none; /* Hide all tab contents initially */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.tab-contents.active-tab {
+  display: block; /* Show active tab content */
+  margin-top: 1rem; /* Optional: Adjust margin for spacing */
+  transform: translateY(0); /* Initial state */
+}
+
+.tab-contents:hover {
+  transform: translateY(-5px); /* Lift on hover effect */
+  background-color: #ff004f; /* Change background color on hover */
+}
+
+/* Animation classes (optional) */
+.animate__fadeInRight {
+  animation: fadeInRight 0.5s ease;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+.animate__fadeInLeft {
+  animation: fadeInLeft 0.5s ease;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Services */
+#services {
+  padding: 30px 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: #262626;
+  padding: 13px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #eff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+
+/* Portfolio */
+#portfolio {
+  padding: 50px 0;
+  background: #262626;
+  -webkit-text-fill-color: #ff004f;
+}
+
+.work-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px; /* Optional: Adjust gap between items */
+  flex-wrap: nowrap; /* Ensure all items are in one row */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+  flex: 0 0 30%; /* Ensure each work item has a fixed width of 30% */
+  min-width: 300px; /* Optional: Minimum width for each item */
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.work:hover .layer {
+  opacity: 1;
+}
+
+.layer h1 {
+  font-weight: 500;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.layer p {
+  color: #fff;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+}
+
+/* Animation for "About me" text */
+.ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: letter-anim 0.6s forwards;
+}
+
+@keyframes letter-anim {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ml1 .letters {
+  display: inline-block;
+}
+
+/* Contact form styles */
+.contact-form {
+  background: #444;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form .form-control {
+  background: #f7f4f4;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.contact-form .form-control:focus {
+  border-color: #ff004f;
+  box-shadow: 0 0 5px rgba(255, 0, 79, 0.8);
+}
+
+.contact-form .btn-primary {
+  background: #ff004f;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.contact-form .btn-primary:hover {
+  background: #e60046;
+}
+
+.contact-form .btn-block {
+  width: 100%;
+}
+
+/* Contact section text styles */
+#contact h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+#contact p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+#contact ul.list-unstyled {
+  font-size: 1rem;
+}
+
+#contact ul.list-unstyled li {
+  margin-bottom: 0.5rem;
+}
+
+#contact ul.list-inline {
+  font-size: 1.5rem;
+}
+
+#contact ul.list-inline li {
+  margin-right: 0.5rem;
+}
+
+#contact ul.list-inline li a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#contact ul.list-inline li a:hover {
+  color: #ff004f;
 }
