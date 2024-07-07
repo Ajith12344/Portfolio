@@ -2,7 +2,7 @@ import React from 'react';
 import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'; // Assuming your CSS is in App.css
-import headerImage from '../images/im1.JPG'; // Update with your actual image file
+import headerImage from '../images/file.png'; // Update with your actual image file
 
 const Header = () => (
   <header className="bg-dark text-white text-center py-5" id="home">
