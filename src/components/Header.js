@@ -35,7 +35,7 @@ const Header = () => (
       <div className="header-content">
         <div className="header-text animate__animated animate__fadeIn text-left">
           <p className="display-4">WEB DEVELOPER</p>
-          <h1>Hi, I am <span>Ajith</span></h1>
+          <h1>Hi, I am <span className="animate-character">Ajith</span></h1>
         </div>
         <div className="header-image">
           <img src={headerImage} alt="Professional Header" className="img-fluid" />
