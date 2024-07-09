@@ -43,14 +43,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -68,7 +61,6 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "assert": "^2.1.0",
     "browserify-zlib": "^0.2.0",
-    "eslint": "^9.6.0",
     "https-browserify": "^1.0.0",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
