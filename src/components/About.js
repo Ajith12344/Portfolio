@@ -11,8 +11,10 @@ const About = () => {
     const animateText = (selector) => {
       const textWrapper = document.querySelector(selector);
       if (textWrapper) {
-        textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w|')/g, "<span class='letter'>$&</span>");
-
+        textWrapper.innerHTML = [...textWrapper.textContent]
+        .map(char => `<span class='letter'>${char}</span>`)
+        .join('');
+      
         anime.timeline({ loop: false })
           .add({
             targets: `${selector} .letter`,
