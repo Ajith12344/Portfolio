@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import anime from 'animejs/lib/anime.es.js';
+
 import '../App.css'; // Assuming your CSS is in App.css
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);

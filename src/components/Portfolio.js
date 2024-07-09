@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import 'animate.css';
 import headerImage from '../images/news.jpeg'; // Update with your actual image file
-import headerImage1 from '../images/im1.JPG';
 import headerImage2 from '../images/event.jpeg';
+import headerImage3 from '../images/texte.jpeg';
 const Portfolio = () => {
   useEffect(() => {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -62,7 +62,7 @@ const Portfolio = () => {
           </div>
           <div className="col-md-4 portfolio-item" style={{ animationDelay: '0.6s' }}>
             <div className="work">
-              <img src={headerImage} className="card-img-top" alt="Project 3" />
+              <img src={headerImage3} className="card-img-top" alt="Project 3" />
               <div className="layer">
                 <h3>TextEditor</h3>
                 <p> conversion and word analysis features.</p>
