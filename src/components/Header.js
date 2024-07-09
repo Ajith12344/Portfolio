@@ -8,7 +8,7 @@ const Header = () => (
   <header className="bg-dark text-white text-center py-5" id="home">
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a className="navbar-brand" href="#">My Portfolio</a>
+        <a className="navbar-brand" href="#">&nbsp;&nbsp;My Portfolio</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

@@ -6,7 +6,6 @@ const Contact = () => {
     name: '',
     email: '',
     message: '',
-    recipientEmail: '', // New state for recipient email
   });
 
   const handleChange = (e) => {
@@ -18,7 +17,7 @@ const Contact = () => {
     try {
       await axios.post('http://localhost:5000/send-email', formData);
       alert('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '', recipientEmail: '' }); // Clear form
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
       alert('Failed to send message. Please try again later.');
@@ -45,6 +44,18 @@ const Contact = () => {
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
                 <label htmlFor="message">Message</label>
                 <textarea
                   className="form-control"
@@ -56,20 +67,8 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <div className="form-group">
-                <label htmlFor="recipientEmail">Recipient Email</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="recipientEmail"
-                  placeholder="Enter recipient's email"
-                  value={formData.recipientEmail}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
               <button type="submit" className="btn btn-primary btn-block">
-                Submit
+                Send <i class="fa-solid fa-paper-plane fa-beat"></i>
               </button>
             </form>
           </div>
@@ -78,13 +77,13 @@ const Contact = () => {
             <p>You can reach out to me via the following contact details:</p>
             <ul className="list-unstyled">
               <li>
-                <i className="fa fa-phone"></i> +1 234 567 890
+                <i className="fa fa-phone"></i> 8073082911
               </li>
               <li>
-                <i className="fa fa-envelope"></i> ajith@example.com
+                <i className="fa fa-envelope"></i> ajithhuggi41@example.com
               </li>
               <li>
-                <i className="fa fa-map-marker"></i> 1234 Street, City, Country
+                <i className="fa fa-map-marker"></i> Reva University, Bengaluru.
               </li>
             </ul>
             <h2>Follow Me</h2>

@@ -6,7 +6,7 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-
+import BackToTop from './components/BackToTop'; 
 const App = () => (
   <div>
     <Header />
@@ -15,7 +15,7 @@ const App = () => (
     <Portfolio />
     <Contact/>
     <Footer />
-
+    <BackToTop/>
   </div>
 );
 

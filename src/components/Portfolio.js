@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import 'animate.css';
-import headerImage from '../images/im1.JPG'; // Update with your actual image file
-
+import headerImage from '../images/news.jpeg'; // Update with your actual image file
+import headerImage1 from '../images/im1.JPG';
+import headerImage2 from '../images/event.jpeg';
 const Portfolio = () => {
   useEffect(() => {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -43,19 +44,19 @@ const Portfolio = () => {
             <div className="work">
               <img src={headerImage} className="card-img-top" alt="Project 1" />
               <div className="layer">
-                <h1>Project 1</h1>
-                <p>Project description goes here.</p>
-                <a href="#" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
+                <h3>News-Api</h3>
+                <p>News API: Access current news articles for application integration.</p>
+                <a href="https://github.com/Ajith12344/News-api" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
               </div>
             </div>
           </div>
           <div className="col-md-4 portfolio-item" style={{ animationDelay: '0.3s' }}>
             <div className="work">
-              <img src={headerImage} className="card-img-top" alt="Project 2" />
+              <img src={headerImage2} className="card-img-top" alt="Project 2" />
               <div className="layer">
-                <h1>Project 2</h1>
-                <p>Project description goes here.</p>
-                <a href="#" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
+                <h3>Event Management</h3>
+                <p>Planning and executing seamless, successful events.</p>
+                <a href="https://github.com/Ajith12344/Event_Management" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
               </div>
             </div>
           </div>
@@ -63,9 +64,9 @@ const Portfolio = () => {
             <div className="work">
               <img src={headerImage} className="card-img-top" alt="Project 3" />
               <div className="layer">
-                <h1>Project 3</h1>
-                <p>Project description goes here.</p>
-                <a href="#" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
+                <h3>TextEditor</h3>
+                <p> conversion and word analysis features.</p>
+                <a href="https://github.com/Ajith12344/TextEditor-react-app" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
               </div>
             </div>
           </div>

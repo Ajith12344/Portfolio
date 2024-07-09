@@ -132,6 +132,7 @@ header {
 .tab-titles {
   display: flex;
   margin-bottom: 1rem;
+  
 }
 
 /* Tab links */
@@ -140,17 +141,23 @@ header {
   padding: 1rem;
   margin-right: 1rem;
   border-radius: 0.5rem;
+  border: 1px solid #fff;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tab-links:hover {
-  background-color: #555; /* Darker background on hover */
+  background-color: #333; /* Darker background on hover */
   color: #fff; /* White text on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgb(0, 218, 47);
 }
 
 .tab-links.active-link {
   background-color: #555; /* Darker background for active tab */
   color: #fff; /* White text for active tab */
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgb(0, 218, 47);
 }
 
 /* Tab contents */
@@ -176,7 +183,7 @@ header {
 /* Animation classes (optional) */
 .scroll-up {
   opacity: 0;
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 3s ease-out, transform 3s ease-out;
 }
 
 .scroll-up.visible {
@@ -202,6 +209,54 @@ header {
 .ml1 .letter {
   display: inline-block;
   line-height: 1em;
+}
+/* Styling for the details box */
+.details-box {
+  border: 1px solid #fff;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgb(0, 218, 47);
+}
+
+.professional-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.professional-details li {
+  margin: 10px 0;
+  position: relative;
+}
+
+.detail-title {
+  font-weight: bold;
+  display: inline-block;
+  width: 150px;
+}
+
+.professional-details li::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.professional-details li:hover::after {
+  transform: scaleX(1);
 }
 
 
@@ -282,7 +337,7 @@ header {
 #portfolio {
   padding: 50px 0;
   background: #262626;
-  -webkit-text-fill-color: #ff004f;
+  -webkit-text-fill-color: #e7e1e3;
 }
 
 .work-list {
@@ -304,6 +359,7 @@ header {
 
 .work img {
   width: 100%;
+  height: 220px;
   border-radius: 10px;
   display: block;
 }
@@ -481,4 +537,41 @@ header {
 
 #contact ul.list-inline li a:hover {
   color: #ff004f;
+}
+
+.backtop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Initially hidden */
+}
+
+.backtop a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #dc3545; /* Bootstrap danger color */
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.backtop a:hover {
+  background: #c82333; /* Darker shade of Bootstrap danger color */
+  color: #fff;
+}
+
+.backtop a i {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .backtop {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .backtop a {
+    padding: 8px 12px;
+  }
 }

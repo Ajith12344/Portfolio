@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import anime from 'animejs/lib/anime.es.js';
 import '../App.css'; // Assuming your CSS is in App.css
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('skills');
 
   useEffect(() => {
-    // Text reveal animation
     const animateText = (selector) => {
       const textWrapper = document.querySelector(selector);
       if (textWrapper) {
@@ -26,7 +27,6 @@ const About = () => {
       }
     };
 
-    // Scroll up effect
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -55,12 +55,17 @@ const About = () => {
             <h1 className="sub-title ml1">
               <span className="letters from-left">About me</span>
             </h1>
-            <p className="ml1">
-              <span className="letters from-left">Myself Ajith, studying B-tech CSE at Reva University.</span>
-            </p>
+            <div className="details-box scroll-up from-left" id="details-box">
+              <ul className="professional-details">
+                <li><span className="detail-title">Name    </span>: &nbsp;&nbsp;Ajith Dileep Huggi</li>
+                <li><span className="detail-title">Graduation Year</span>: &nbsp;&nbsp;2021-2025</li>
+                <li><span className="detail-title">Branch         </span>: &nbsp;&nbsp;Computer Science and Engineering</li>
+                <li><span className="detail-title">Institute      </span>: &nbsp;&nbsp;Reva University</li>
+              </ul>
+            </div>
           </div>
           <div className="col-lg-6 scroll-up from-right" id="tabs-section">
-            <div className="tab-titles">
+            <div className="tab-titles" >
               <p className={`tab-links ${activeTab === 'skills' ? 'active-link' : ''}`} onClick={() => handleTabClick('skills')}>Skills</p>
               <p className={`tab-links ${activeTab === 'experience' ? 'active-link' : ''}`} onClick={() => handleTabClick('experience')}>Experience</p>
               <p className={`tab-links ${activeTab === 'education' ? 'active-link' : ''}`} onClick={() => handleTabClick('education')}>Education</p>
@@ -78,8 +83,12 @@ const About = () => {
             </div>
             <div className={`tab-contents scroll-up ${activeTab === 'education' ? 'visible' : ''} from-right`} id="education-section" style={{ display: activeTab === 'education' ? 'block' : 'none' }}>
               <ul className="ml1">
-                <li><span className="letters from-right">School</span><br />SMSHM</li>
-                <li><span className="letters from-right">PU-College</span><br />Excellent</li>
+                <li>
+                  <span className="letters from-right">01/06/2019 India</span><br />High School: SMSHM-public school Kembhavi  <FontAwesomeIcon icon={faGraduationCap} />
+                </li>
+                <li>
+                  <span className="letters from-right">03/05/2021 India</span><br />PUC: Excellent Pu Science College - Vijayapur  <FontAwesomeIcon icon={faGraduationCap} />
+                </li>
               </ul>
             </div>
           </div>
