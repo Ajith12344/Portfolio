@@ -3,6 +3,7 @@ import 'animate.css';
 import headerImage from '../images/news.jpeg'; // Update with your actual image file
 import headerImage2 from '../images/event.jpeg';
 import headerImage3 from '../images/texte.jpeg';
+import headerImage4 from '../images/shopping.jpg';
 const Portfolio = () => {
   useEffect(() => {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -57,6 +58,16 @@ const Portfolio = () => {
                 <h3>Event Management</h3>
                 <p>Planning and executing seamless, successful events.</p>
                 <a href="https://github.com/Ajith12344/Event_Management" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 portfolio-item" style={{ animationDelay: '0.3s' }}>
+            <div className="work">
+              <img src={headerImage4} className="card-img-top" alt="Project 2" />
+              <div className="layer">
+                <h3>E-commerce</h3>
+                <p>ShopOnline: Your One-Stop Destination for Online Shopping.</p>
+                <a href="https://github.com/Ajith12344/E-commerce" className="btn btn-primary"><i className="fa-brands fa-app-store-ios"></i> View</a>
               </div>
             </div>
           </div>

@@ -414,6 +414,7 @@ header {
 /* Animation for Portfolio */
 .portfolio-item {
   opacity: 0;
+  margin-bottom: 30px;
   transform: scale(0.8);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
