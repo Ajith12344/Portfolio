@@ -80,13 +80,13 @@ const About = () => {
             </div>
             <div className={`tab-contents scroll-up ${activeTab === 'experience' ? 'visible' : ''} from-right`} id="experience-section" style={{ display: activeTab === 'experience' ? 'block' : 'none' }}>
               <ul className="ml1">
-                <li><span className="letters from-right">Web Developer Intern</span><br />Internship Studio</li>
+                <li><span className="letters from-right">Web-Developer-Intern</span><br />Internship Studio</li>
               </ul>
             </div>
             <div className={`tab-contents scroll-up ${activeTab === 'education' ? 'visible' : ''} from-right`} id="education-section" style={{ display: activeTab === 'education' ? 'block' : 'none' }}>
               <ul className="ml1">
                 <li>
-                  <span className="letters from-right">01/06/2019 India</span><br />High School: SMSHM-public school Kembhavi  <FontAwesomeIcon icon={faGraduationCap} />
+                  <span className="letters from-right">01/06/2019-India</span><br />High School: SMSHM-public school Kembhavi  <FontAwesomeIcon icon={faGraduationCap} />
                 </li>
                 <li>
                   <span className="letters from-right">03/05/2021 India</span><br />PUC: Excellent Pu Science College - Vijayapur  <FontAwesomeIcon icon={faGraduationCap} />
